@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.nelioalves.cursomc.domain.enums.EstadoPagamento;
 
 @Entity
+//indica o type vindo do json
 @JsonTypeName("pagamentoComBoleto")
 public class PagamentoComBoleto extends Pagamento {
 	private static final long serialVersionUID = 1L;
@@ -16,6 +17,7 @@ public class PagamentoComBoleto extends Pagamento {
 	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataVencimento;
 
+	//formatar impressao da data
 	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataPagamento;
 

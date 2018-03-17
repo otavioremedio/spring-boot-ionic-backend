@@ -27,6 +27,7 @@ public class Produto  implements Serializable {
 	private String nome;
 	private Double preco;
 	
+	//utilizado para ignorar no load do objeto
 	@JsonIgnore
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
@@ -35,7 +36,9 @@ public class Produto  implements Serializable {
 	)
 	private List<Categoria> categorias = new ArrayList<>();
 	
+	
 	@JsonIgnore
+	//relacionamento chave composta
 	@OneToMany(mappedBy="id.produto")
 	private Set<ItemPedido> itens = new HashSet<>();
 	

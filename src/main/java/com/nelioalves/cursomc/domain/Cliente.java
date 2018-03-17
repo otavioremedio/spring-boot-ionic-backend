@@ -31,6 +31,7 @@ public class Cliente implements Serializable {
 	private Integer id;
 	private String nome;
 	
+	//nao repete , chave unique
 	@Column(unique=true)
 	private String email;
 	private String cpfOuCnpj;
@@ -42,6 +43,7 @@ public class Cliente implements Serializable {
 	@OneToMany(mappedBy="cliente", cascade=CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
+	//nao permite repeticao
 	@ElementCollection
 	@CollectionTable(name="TELEFONE")
 	private Set<String> telefones = new HashSet<>();
