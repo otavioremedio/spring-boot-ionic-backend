@@ -70,12 +70,14 @@ public abstract class AbstractEmailService implements EmailService {
 		return templateEngine.process("email/confirmacaoPedido", context);
 	}
 	
+	//aula 72 - nova senha
 	@Override
 	public void sendNewPasswordEmail(Cliente cliente, String newPass) {
 		SimpleMailMessage sm = prepareNewPasswordEmail(cliente, newPass);
 		sendEmail(sm);
 	}
 
+	//aula 72 - nova senha
 	protected SimpleMailMessage prepareNewPasswordEmail(Cliente cliente, String newPass) {
 		SimpleMailMessage sm = new SimpleMailMessage();
 		sm.setTo(cliente.getEmail());

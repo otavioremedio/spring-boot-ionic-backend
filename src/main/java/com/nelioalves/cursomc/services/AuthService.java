@@ -10,6 +10,7 @@ import com.nelioalves.cursomc.domain.Cliente;
 import com.nelioalves.cursomc.repositories.ClienteRepository;
 import com.nelioalves.cursomc.services.exceptions.ObjectNotFoundException;
 
+//aula 72 - envio de nova senha
 @Service
 public class AuthService {
 

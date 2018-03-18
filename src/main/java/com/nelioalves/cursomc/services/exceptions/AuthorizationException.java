@@ -1,5 +1,6 @@
 package com.nelioalves.cursomc.services.exceptions;
 
+//implementação de restrição de conteudo
 public class AuthorizationException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;

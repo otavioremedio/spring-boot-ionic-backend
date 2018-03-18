@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.nelioalves.cursomc.domain.enums.Perfil;
 
+//classe de usuário para autenticar
 public class UserSS implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
@@ -68,6 +69,7 @@ public class UserSS implements UserDetails {
 		return true;
 	}
 	
+	//implementação de restrição de conteudo
 	public boolean hasRole(Perfil perfil) {
 		return getAuthorities().contains(new SimpleGrantedAuthority(perfil.getDescricao()));
 	}

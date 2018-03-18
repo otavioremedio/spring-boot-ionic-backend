@@ -9,6 +9,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+//implementação autorização
 @Component
 public class JWTUtil {
 	
@@ -27,6 +28,7 @@ public class JWTUtil {
 	}
 	
 	public boolean tokenValido(String token) {
+		//tipo do jwt que armazena as reinvidicações do token
 		Claims claims = getClaims(token);
 		if (claims != null) {
 			String username = claims.getSubject();

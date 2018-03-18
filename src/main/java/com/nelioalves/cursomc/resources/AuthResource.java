@@ -16,6 +16,7 @@ import com.nelioalves.cursomc.security.UserSS;
 import com.nelioalves.cursomc.services.AuthService;
 import com.nelioalves.cursomc.services.UserService;
 
+//aula 71 - refresh token
 @RestController
 @RequestMapping(value = "/auth")
 public class AuthResource {
@@ -35,6 +36,7 @@ public class AuthResource {
 		return ResponseEntity.noContent().build();
 	}
 
+	//aula 72 - esqueceu a senha
 	@RequestMapping(value = "/forgot", method = RequestMethod.POST)
 	public ResponseEntity<Void> forgot(@Valid @RequestBody EmailDTO objDto) {
 		service.sendNewPassword(objDto.getEmail());

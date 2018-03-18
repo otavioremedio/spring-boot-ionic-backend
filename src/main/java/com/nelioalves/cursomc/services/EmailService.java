@@ -13,6 +13,7 @@ public interface EmailService {
 	
 	void sendEmail(SimpleMailMessage msg);
 	
+	//aula 72 - nova senha
 	void sendNewPasswordEmail(Cliente cliente, String newPass);
 	
 	void sendOrderConfirmationHtmlEmail(Pedido obj);

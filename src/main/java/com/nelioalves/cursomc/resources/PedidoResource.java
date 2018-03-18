@@ -39,6 +39,7 @@ public class PedidoResource {
 		return ResponseEntity.created(uri).build();
 	}
 
+	//aula 70, restrição de pedidos do usuário
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<Page<Pedido>> findPage(
 			@RequestParam(value="page", defaultValue="0") Integer page, 

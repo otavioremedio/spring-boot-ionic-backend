@@ -78,6 +78,7 @@ public class PedidoService {
 		return obj;
 	}
 	
+	//aula 70, restrição de pedidos do usuário
 	public Page<Pedido> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
 		UserSS user = UserService.authenticated();
 		if (user == null) {
